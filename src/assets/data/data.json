@@ -1,0 +1,218 @@
+{
+  "assessments": [
+    {
+      "name": "Wearing The Right C.A.P.™ Fivefold Ministry Leadership Assessment Answer Sheet©",
+      "questions": [
+        {
+          "id": 1,
+          "question": [
+            {
+              "statement": "I have the ability to delegate to others.",
+              "category": "apostle"
+            },
+            {
+              "statement": "I get joy in announcing the Good News and the Gospel of Christ.",
+              "category": "evangelist"
+            }
+          ],
+          "answer": [
+            {
+              "statement": "Most of the time",
+              "score": 2
+            },
+            {
+              "statement": "Sometimes",
+              "score": 1
+            },
+            {
+              "statement": "Rarely / Not at all",
+              "score": 0
+            }
+          ],
+          "selected": {
+            "statement": null,
+            "score": null,
+            "category": null,
+            "option": null
+          },
+          "audio": {
+            "filename": "5FM_Q_1.mp3",
+            "object": null
+          },
+          "question_time": null
+        },
+        {
+          "id": 2,
+          "question": [
+            {
+              "statement": "God uses me as a convicting agent to move the heart of the people to change.",
+              "category": "apostle"
+            },
+            {
+              "statement": "I reject some information that lacks personal application. ",
+              "category": "evangelist"
+            }
+          ],
+          "answer": [
+            {
+              "statement": "Most of the time",
+              "score": 2
+            },
+            {
+              "statement": "Sometimes",
+              "score": 1
+            },
+            {
+              "statement": "Rarely / Not at all",
+              "score": 0
+            }
+          ],
+          "selected": {
+            "statement": null,
+            "score": null,
+            "category": null,
+            "option": null
+          },
+          "audio": {
+            "filename": "5FM_Q_2.mp3",
+            "object": null
+          },
+          "question_time": null
+        }
+      ],
+      "categories": [
+        "apostle",
+        "prophet",
+        "evangelist",
+        "pastor",
+        "teacher"
+      ]
+    },
+    {
+      "name": "Wearing The Right C.A.P. PAGS Placement Assessment",
+      "questions": [
+        {
+          "id": 1,
+          "question": [
+            {
+              "statement": "I like to take charge",
+              "category": "publisher"
+            },
+            {
+              "statement": "I like to share good news",
+              "category": "protector"
+            }
+          ],
+          "answer": [
+            {
+              "statement": "Most of the time",
+              "score": 2
+            },
+            {
+              "statement": "Sometimes",
+              "score": 1
+            },
+            {
+              "statement": "Rarely / Not at all",
+              "score": 0
+            }
+          ],
+          "selected": {
+            "statement": null,
+            "score": null,
+            "category": null,
+            "option": null
+          },
+          "audio": {
+            "filename": "5FM_Q_2.mp3",
+            "object": null
+          },
+          "question_time": null
+        },
+        {
+          "id": 2,
+          "question": [
+            {
+              "statement": "I like to take pen",
+              "category": "projector"
+            },
+            {
+              "statement": "I like to share good boots",
+              "category": "producer"
+            }
+          ],
+          "answer": [
+            {
+              "statement": "Most of the time",
+              "score": 2
+            },
+            {
+              "statement": "Sometimes",
+              "score": 1
+            },
+            {
+              "statement": "Rarely / Not at all",
+              "score": 0
+            }
+          ],
+          "selected": {
+            "statement": null,
+            "score": null,
+            "category": null,
+            "option": null
+          },
+          "audio": {
+            "filename": "5FM_Q_2.mp3",
+            "object": null
+          },
+          "question_time": null
+        },
+        {
+          "id": 3,
+          "question": [
+            {
+              "statement": "I like to take gun",
+              "category": "projector"
+            },
+            {
+              "statement": "I like to share good news",
+              "category": "producer"
+            }
+          ],
+          "answer": [
+            {
+              "statement": "Most of the time",
+              "score": 2
+            },
+            {
+              "statement": "Sometimes",
+              "score": 1
+            },
+            {
+              "statement": "Rarely / Not at all",
+              "score": 0
+            }
+          ],
+          "selected": {
+            "statement": null,
+            "score": null,
+            "category": null,
+            "option": null
+          },
+          "audio": {
+            "filename": "5FM_Q_2.mp3",
+            "object": null
+          },
+          "question_time": null
+        }
+      ],
+      "categories": [
+        "producer",
+        "projector",
+        "publisher",
+        "protector",
+        "potter"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+MySql Database is ready.(Fields are unknown to me).
+75 question assessment question.
+I have questions and responses.
+One question every 5 seconds on screen with audio voiceover.
+Only one answer per question.
+Each question has an A & B choice.
+Each choice has a value of 1 or 2 points.
+Results displayed ( 5 categories) in a BAR GRAPH automatically. 
+The answer is then automatically graphed to see results.
+The assessment would also be password protected (auto generated if possible).
+The results would be seen by test taker and results sent to us for further evaluation and stats
+Schedule has been non stop.
+75 questions with choice of A or B response. Value- 1, 2 or blank.
+When submitted, client will see results in a graph with 5 categories.
+If possible, I would like to receive results for assessment stats.
+Different password for each attempt.
+Fee for assessment.
+New timer value: 10 seconds.
+
+
+There are 5 categories; 2 different assessments:
+
+1-First Assessment: 
+    Name: Wearing The Right C.A.P. Fivefold Ministry Leadership Assessment(c)
+    Categories: Apostle Prophet Evangelist Pastor Teacher
+2-Second Assessment: 
+    Name: Wearing The Right C.A.P. PAGS Placement Assessment
+    Categories: Producer Projector Publisher Protector Potter
+
+I have the 75 questions with score sheet (A or B column with a value of 1 or 2 for each question)
+
+The bar graph shows how many points the person scored for each category
+
+EXAMPLE QUESTION:
+
+Assessment Name:
+Wearing The Right C.A.P.™ Fivefold Ministry Leadership Assessment Answer Sheet©
+
+Directions: 
+You will be given two (2) statements (A and B). Choose between the two statements which one is most like you. There will be times when neither statement describes you. Leave that question blank. When both statements describe you, choose between the two which describes you best.
+
+Question: 
+    A- I like to take charge
+    B- I like to share good news
+          
+Options: 
+    Most of the time [score -> 2]
+    Sometimes [score -> 1]
+    Rarely/Not at all [score -> 0]
+
+Key is in work file which show in which catogy to add the points
+    

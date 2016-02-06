@@ -1,0 +1,32 @@
+<div class="container-fluid auth">
+  <div class="row">
+    <div class="cover">
+      <img src="assets/images/login.jpg">
+    </div>
+    <div class="login col-md-offset-4 col-md-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Please enter your credentials</h3>
+        </div>
+        <div class="panel-body">
+          <form>
+            <div class="input-group form-group">
+              <span class="input-group-addon" id="email">@</span>
+              <input type="email" class="form-control" ng-model="auth.email" placeholder="Email"
+                     aria-describedby="basic-addon1" required>
+            </div>
+            <div class="input-group form-group">
+              <span class="input-group-addon" id="pass">*</span>
+              <input type="password" class="form-control" ng-model="auth.password" placeholder="Password"
+                     aria-describedby="basic-addon1" required>
+            </div>
+            <div class="input-group form-group pull-right">
+              <button type="submit" class="btn btn-primary" ng-click="auth.login()">Sign in</button>
+            </div>
+            <p class="text-danger" ng-hide="auth.userVerified">Incorrect username or password</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

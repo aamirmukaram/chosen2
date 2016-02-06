@@ -1,0 +1,160 @@
+<div class="container">
+  <div class="row">
+    <span us-spinner spinner-on="main.showSpinner"></span>
+  </div>
+  <div class="row" ng-hide="main.showSpinner">
+    <div class="col-md-12">
+      <div class="page-header">
+        <h1>Assessment System</h1>
+      </div>
+      <div ng-if="main.isAssessmentEnded">
+        <h3>Result</h3>
+
+        <div ng-repeat="assessment in main.data.assessments" class="clearfix">
+          <div class="text-center bg-info pd15">
+            <h5>{{assessment.name}}</h5>
+          </div>
+          <div>
+            <table class="table table-striped">
+              <thead>
+              <tr>
+                <th>Question #</th>
+                <th>Selected Statement</th>
+                <th>Score</th>
+                <th>Category</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr ng-repeat="question in assessment.questions">
+                <td>{{question.id}}</td>
+                <td ng-if="question.selected.statement !=null">{{question.selected.statement}}</td>
+                <td ng-if="question.selected.statement ==null">Statement not selected</td>
+                <td ng-if="question.selected.score !=null">{{question.selected.score}}</td>
+                <td ng-if="question.selected.score ==null">Score not calculated</td>
+                <td ng-if="question.selected.category !=null">{{question.selected.category}}</td>
+                <td ng-if="question.selected.category ==null">Category not selected</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="bar-graph col-md-6 col-md-offset-3">
+
+            <canvas class="chart chart-bar"
+                    chart-data="[main.graphData[$index]]"
+                    chart-labels="assessment.categories">
+            </canvas>
+          </div>
+        </div>
+      </div>
+      <uib-tabset justified="true" ng-if="!main.isAssessmentEnded">
+        <uib-tab heading="{{assessments.name}}"
+                 disable="true"
+                 active="main.tabActive[$index]"
+                 ng-repeat="assessments in main.data.assessments">
+          <div class="assessment-content">
+            <p class="bg-info pd20 mg-top25">
+              <u>Directions:</u>You will be given two (2) statements (A and B). Choose between the two
+              statements
+              which one is most like you. There will be times when neither statement describes you.
+              Leave
+              that question blank. When both statements describe you, choose between the two which
+              describes you best.
+            </p>
+
+            <div class="panel panel-success mg-top25">
+              <div class="panel-heading text-center">
+                <b> Assessment Name: {{assessments.name}}</b>
+              </div>
+              <div class="panel-body">
+                <div class="question-content">
+                  <div class="row">
+                    <div class="col-md-6 h4 text-danger">
+                      Question #
+                      {{main.data.assessments[main.currentAssessmentIndex].questions[main.currentQuestionIndex].id}}
+                    </div>
+                    <div class="h4 col-md-2 col-md-offset-4" ng-show="main.selectedAnswerCategory == null">
+                      <button type="button"
+                              ng-if="(main.data.assessments[main.currentAssessmentIndex].questions.length > main.currentQuestionIndex + 1)"
+                              ng-click="main.onClickSelectedAnswer(false)"
+                              class="btn btn-warning pull-right">
+                        Skip statement
+                      </button>
+                      <button type="button"
+                              ng-if="!(main.data.assessments[main.currentAssessmentIndex].questions.length > main.currentQuestionIndex + 1)"
+                              ng-click="main.onClickSelectedAnswer(false)"
+                              class="btn btn-danger pull-right">
+                        <span ng-show="main.currentAssessmentIndex == 0">Next Assessment</span>
+                        <span ng-show="main.currentAssessmentIndex == 1">End Assessment</span>
+                      </button>
+                    </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="h4 col-md-12 text-info">
+                      Select one statement if it suits you else skip it.
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <timer
+                              countdown=main.data.assessments[main.currentAssessmentIndex].questions[main.currentQuestionIndex].question_time
+                              finish-callback="main.onClickSelectedAnswer(false)"
+                              interval="1000">
+                        <div class="h5 text-center"
+                             ng-class="{'bg-danger':seconds<=4}">
+                          <strong>
+                            Time left for this question:
+                            <span>{{seconds}} second{{secondsS}}</span>
+                          </strong>
+                        </div>
+                      </timer>
+                    </div>
+                  </div>
+                  <div ng-repeat="questions in  assessments.questions">
+                    <div ng-show="$index == main.currentQuestionIndex">
+                      <div class="question-statements" ng-repeat="question in questions.question">
+                        <span>Statement {{main.numToChar($index) | uppercase}}</span>
+                        <button type="button"
+                                ng-click="main.onClickSelectedStatement(question.category,question.statement)"
+                                ng-class="{'active btn-success': question.category == main.selectedAnswerCategory}"
+                                ng-disabled="main.selectedAnswerCategory != null"
+                                class="btn btn-primary btn-block mg-top10">
+                          {{question.statement}}
+                        </button>
+                      </div>
+                      <div ng-show="main.selectedAnswerCategory != null">
+                        <div class="h4">
+                          Options
+                        </div>
+                        <div class="question-answers" ng-repeat="answer in questions.answer">
+                          <button type="button"
+                                  ng-click="main.onClickSelectedAnswer(answer.score,answer.statement)"
+                                  class="btn btn-primary btn-block mg-top10">
+                            {{answer.statement}}
+                          </button>
+                        </div>
+                      </div>
+                      <hr>
+                    </div>
+                  </div>
+                  <div class="h3">
+                    Assessment Graph
+                  </div>
+                  <div class="bar-graph col-md-6 col-md-offset-3">
+
+                    <canvas id="bar" class="chart chart-bar"
+                            chart-data="[main.graphData[main.currentAssessmentIndex]]"
+                            chart-labels="assessments.categories">
+                    </canvas>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </uib-tab>
+      </uib-tabset>
+
+    </div>
+  </div>
+</div>
